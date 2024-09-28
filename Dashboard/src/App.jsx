@@ -4,11 +4,11 @@ import {useMode, ColorModeContext} from './theme'
 import { ThemeProvider} from '@emotion/react'
 import CssBaseline from '@mui/material/CssBaseline';
 import Topbar from  './scenes/global/Topbar'
-import Sidebar from './scenes/global/Sidebar'
+import Drawer from './scenes/global/Drawer'
 import Dashboard from './scenes/dashboard';
-// import Team from './scenes/Team';
+import Team from './scenes/team';
 // import Invoices from './scenes/invoices';
-// import Contacts from './scenes/contacts ';
+import Contacts from './scenes/contacts';
 // import Bar from './scenes/bar';
 // import Form from './scenes/form';
 // import Line from './scenes/line';
@@ -26,13 +26,15 @@ const App = () => {
     <ThemeProvider theme={theme}>
      <CssBaseline />
      <div className='app'>
-      <Sidebar />
+      <div>
+      <Drawer />
+      </div>
       <main className='content'>
         <Topbar />
         <Routes>
           <Route path='/' element={<Dashboard />} />
-          {/* <Route path='/team' element={<Team />} /> */}
-          {/* <Route path='/contacts' element={<Contacts />} /> */}
+          <Route path='/team' element={<Team />} />
+          <Route path='/contacts' element={<Contacts />} />
           {/* <Route path='/invoices' element={<Invoices />} /> */}
           {/* <Route path='/bar' element={<Bar />} /> */}
           {/* <Route path='/form' element={<Form />} /> */}
