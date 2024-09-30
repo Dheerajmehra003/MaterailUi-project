@@ -30,3 +30,7 @@ body,
 ::-webkit-scrollbar-track:hover {
     background: #555;
 }
+
+.sidebar{
+    height: 1000px;
+}
